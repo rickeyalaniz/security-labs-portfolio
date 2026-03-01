@@ -2,16 +2,16 @@
 
 This repository is a central index for my hands on cybersecurity labs. Each lab is documented in its own repository and focuses on **analyst reasoning, telemetry validation, and investigative decision making**, not just tool output.
 
-## Recruiter Friendly Summary
+## Recruiter friendly summary
 
 - Practical SOC style investigations with repeatable workflows and evidence
-- Endpoint telemetry validation (Sysmon and Defender) plus Microsoft 365 investigation labs
+- Endpoint telemetry validation (Sysmon and Defender) plus Microsoft 365 investigations
 - Clear artifacts: screenshots, logs, queries, and remediation validation steps
 - Built to communicate how I think, triage, pivot, and confirm outcomes
 
 ---
 
-## SOC and Detection Labs
+## SOC and detection labs
 
 ### [Lab 01, Endpoint Telemetry Validation Using Sysmon and Microsoft Defender](https://github.com/rickeyalaniz/01-endpoint-telemetry-sysmon-defender)
 **Focus:** Process creation telemetry, endpoint prevention behavior, and Sysmon visibility gaps  
@@ -33,15 +33,22 @@ This repository is a central index for my hands on cybersecurity labs. Each lab 
 **Focus:** Simulated post compromise behavior using inbox rule abuse and OAuth consent persistence, validated evidence in Purview Audit and Entra audit logs, documented remediation and re validation workflow  
 **Tools:** Microsoft Purview Audit (Unified Audit Log), Microsoft Entra ID, Outlook on the web, Exchange Online PowerShell (optional), KQL hunts (optional)  
 
+### [Lab 06, M365 phishing email investigation, message trace, headers, and Defender hunting](https://github.com/rickeyalaniz/06_m365_phishing_email_investigation)
+**Focus:** User reported phishing triage, Exchange Online message trace validation, header analysis (SPF, DKIM, DMARC), Microsoft 365 Defender hunting pivots (EmailEvents, EmailUrlInfo, EmailAttachmentInfo), containment by removing the message, and post action validation  
+**Tools:** Exchange admin center (message trace), Outlook, Microsoft 365 Defender (Explorer and Advanced Hunting), KQL hunts, header analyzer  
+
+
 ---
 
-## Upcoming Labs
+## Upcoming labs
 
-- **Lab 06:** M365 Phishing Email Investigation  
+- **Microsoft Sentinel build out:** create a dedicated lab tenant, enable Microsoft Sentinel, connect data sources, and validate end to end ingestion
+- **C2 investigation workflow:** simulate command and control style activity, investigate the kill chain across endpoint and cloud telemetry, and document the pivots and containment steps
+- **Detection tuning:** move from one off hunts into repeatable analytics rules, triage logic, and false positive reduction
 
 ---
 
-## About This Portfolio
+## About this portfolio
 
 These labs are built to reflect how a SOC analyst or detection focused role works in practice:
 
@@ -52,7 +59,7 @@ These labs are built to reflect how a SOC analyst or detection focused role work
 
 ## Where I am headed next
 
-I am expanding from endpoint visibility into deeper Microsoft 365 investigation workflows, then into detection tuning and higher fidelity alert logic.
+I am expanding from endpoint visibility into deeper Microsoft 365 investigation workflows, then into Microsoft Sentinel ingestion and detection engineering, then into higher fidelity alert logic and repeatable investigation playbooks.
 
 ---
 
