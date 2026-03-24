@@ -5,7 +5,7 @@ This repository is a central index for my hands on cybersecurity labs. Each lab 
 ## Recruiter friendly summary
 
 - Practical SOC style investigations with repeatable workflows and evidence
-- Endpoint telemetry validation (Sysmon and Defender) plus Microsoft 365 investigations
+- Endpoint telemetry validation, Splunk based investigations, and Microsoft 365 investigations
 - Clear artifacts: screenshots, logs, queries, and remediation validation steps
 - Built to communicate how I think, triage, pivot, and confirm outcomes
 
@@ -37,29 +37,32 @@ This repository is a central index for my hands on cybersecurity labs. Each lab 
 **Focus:** User reported phishing triage, Exchange Online message trace validation, header analysis (SPF, DKIM, DMARC), Microsoft 365 Defender hunting pivots (EmailEvents, EmailUrlInfo, EmailAttachmentInfo), containment by removing the message, and post action validation  
 **Tools:** Exchange admin center (message trace), Outlook, Microsoft 365 Defender (Explorer and Advanced Hunting), KQL hunts, header analyzer  
 
+### [Lab 07, Splunk investigation of suspicious PowerShell execution and supporting Defender telemetry](https://github.com/rickeyalaniz/07_splunk_c2_investigation)
+**Focus:** Splunk based investigation using imported Windows log data to scope a host, validate source coverage, isolate PowerShell execution context, review supporting Defender Operational telemetry, and reconstruct a timeline around suspicious activity  
+**Tools:** Splunk Enterprise, Windows Event Logs (PowerShell), Defender Operational logs, PowerShell, CSV log exports  
 
 ---
 
 ## Upcoming labs
 
-- **Microsoft Sentinel build out:** create a dedicated lab tenant, enable Microsoft Sentinel, connect data sources, and validate end to end ingestion
-- **C2 investigation workflow:** simulate command and control style activity, investigate the kill chain across endpoint and cloud telemetry, and document the pivots and containment steps
-- **Detection tuning:** move from one off hunts into repeatable analytics rules, triage logic, and false positive reduction
+- **Microsoft Sentinel build out:** create a dedicated lab tenant, enable Microsoft Sentinel, connect data sources, and validate ingestion
+- **Detection tuning:** move from individual hunts into repeatable analytics rules, triage logic, and false positive reduction
+- **Splunk data pipeline expansion:** add stronger process creation and network telemetry sources to improve investigation depth and correlation
 
 ---
 
 ## About this portfolio
 
-These labs are built to reflect how a SOC analyst or detection focused role works in practice:
+These labs are built to reflect my thought process as a SOC analyst or detection focused role works in practice:
 
 - Validate telemetry pipelines before trusting results  
 - Investigate blocked versus executed activity using evidence, not assumptions  
-- Correlate artifacts across log sources, including Sysmon, Windows event logs, and cloud identity telemetry  
+- Correlate artifacts across log sources, including Sysmon, Windows event logs, Splunk, and cloud identity telemetry  
 - Document pivots, troubleshooting notes, and decision points in a reproducible way  
 
 ## Where I am headed next
 
-I am expanding from endpoint visibility into deeper Microsoft 365 investigation workflows, then into Microsoft Sentinel ingestion and detection engineering, then into higher fidelity alert logic and repeatable investigation playbooks.
+I am expanding from endpoint visibility into deeper Microsoft 365 investigation workflows, Splunk based investigations, then into Microsoft Sentinel ingestion and detection engineering, followed by higher fidelity alert logic and repeatable investigation playbooks.
 
 ---
 
